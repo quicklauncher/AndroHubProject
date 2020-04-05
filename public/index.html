@@ -11,6 +11,7 @@
 
     <!-- Site Metas -->
     <title>AndroHub</title>
+
     <meta name="keywords" content="">
     <meta name="description" content="">
     <meta name="author" content="">
@@ -84,13 +85,7 @@
                     <div class="right-phone-box">
                         <p>Call US :- <a href="#"> +3117929491</a></p>
                     </div>
-                    <div class="our-link">
-                        <ul>
-                            <li><a href="#">Account</a></li>
-                            <li><a href="#">location</a></li>
-                            <li><a href="#">Contact Us</a></li>
-                        </ul>
-                    </div>
+                   
                 </div>
             </div>
         </div>
@@ -117,7 +112,7 @@
                         <li class="nav-item active"><a class="nav-link" href="index.html">Home</a></li>
                         <li class="nav-item"><a class="nav-link" href="inde.html">Login/Signup</a></li>
                         <li class="dropdown megamenu-fw">
-                            <a href="#" class="nav-link dropdown-toggle arrow" data-toggle="dropdown">Product</a>
+                            <a href="QueAns.html" class="nav-link dropdown-toggle arrow" >Ask Questions</a>
                             <ul class="dropdown-menu megamenu-content" role="menu">
                                 <li>
                                     <div class="row">
@@ -703,80 +698,7 @@
     <script src="js/contact-form-script.js"></script>
     <script src="js/custom.js"></script>
 
-
-<div id="app">
-  <div class="comments">
-    <h2>Leave a comment below!</h2>
-
-    <div class="comments-form">
-      <form @submit.prevent="handleSubmit">
-        <ul>
-          <li>
-            <input
-              type="text"
-              placeholder="Name"
-              v-model="username"
-              required
-            >
-          </li>
-          <li>
-            <textarea
-              placeholder="Comment"
-              v-model="comment"
-              required
-            ></textarea>
-          </li>
-          <li>
-            <input
-              type="submit"
-              value="Post &#9998;"
-            >
-          </li>
-        </ul>
-      </form>
-    </div>
     
-    <div class="comments-list">
-      <div class="comment" v-for="comment in comments">
-        <h4>{{ comment.username }} says</h4>
-        <p>{{ comment.comment }}</p>
-        <p class="comment-time">{{ comment.time }}</p>
-      </div>
-    </div>
-    
-    <footer>
-      React Hooks edition <a target="blank" href="https://codepen.io/joshbivens/pen/aMjxVx">here</a> •
-      React edition <a target="blank" href="https://codepen.io/joshbivens/pen/rReZpJ">here</a> | 
-      &#169; 2019 by <a target="blank" href="https://github.com/joshbivens">Josh Bivens</a>
-    </footer>
-  </div>
-</div>
-
-
-<div id="alert">03/01/2019<br>New pen <a target="blank" href="https://codepen.io/joshbivens/pen/rReZpJ">here</a></div>
-<!--   <div class="container">
-    <div class="comment-box">
-      <div class="comment-form">
-        <div class="header">Add Your Comment</div>
-        <form>
-          <div> 
-            <input type="text" id="name" placeholder="Name"/>
-          </div>
-          <div>
-            <textarea id="comment" rows="3" cols="30" placeholder="Comment"></textarea>
-          </div>
-          <button type="submit">COMMENT</button>
-        </form>  
-      </div>
-      <div>
-        <h4 class="header">Comments</h4>
-        <div id="comments"></div>
-      </div>
-      <div class="footer"><hr><p>&copy 2016 by Josh Bivens</p></div>
-    </div>
-  </div> -->
-
-
     
 
 </body>

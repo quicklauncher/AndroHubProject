@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Flutter</title>
+	<title>Question Answers</title>
 
 	<script src="https://www.gstatic.com/firebasejs/4.9.0/firebase.js"></script>
 
@@ -23,36 +23,32 @@
 
 </head>
 <body>
-<h1>Flutter Introduction</h1>
-
-<p>
-	Quickly ship features with a focus on native end-user experiences. Layered architecture allows for full customization, 
-	which results in incredibly fast rendering and expressive and flexible designs.
-	Flutter’s widgets incorporate all critical platform differences such as scrolling, navigation, 
-	icons and fonts, and your Flutter code is compiled to native ARM machine code using Dart's native compilers. 
-	Thus Flutter gives you full native performance on both iOS and Android.
-</p>
-
+<h1>Ask Any Question related to courses and your Quries...
+</h2>We Will Response as soon as posible</h2>
 <table>
-  
+	<tr>  
+	 <td>Id: </td>
+	 <td><input type="text" name="id" id="user_id"   /></td>
+	</tr>
 	<tr>
-	 <td>Comment: </td>
+	 <td>User Name: </td>
 	 <td><input type="text" name="user_name" id="user_name" /></td>
 	</tr>
 	<tr>
 	 <td colspan="2">
-	  <input type="button" value="Submit" onclick="save_user();" />
-	  
+	  <input type="button" value="Save" onclick="save_user();" />
+	  <input type="button" value="Update" onclick="update_user();" />
+	  <input type="button" value="Delete" onclick="delete_user();" />
 	 </td>
 	</tr>
    </table>
    
-   <h3>COMMENTS</h3>
+   <h3>Users Questions</h3>
    
    <table id="tbl_users_list" border="1">
 	<tr>
-	 <td>ID</td>
-	 <td> Comments</td>
+	 <td>#ID</td>
+	 <td>NAME</td>
 	</tr>
    </table>
   
@@ -94,15 +90,37 @@
 	 alert('The user is created successfully!');
 	 reload_page();
 	}
-
-   
+	
+	function update_user(){
+	 var user_name = document.getElementById('user_name').value;
+	 var user_id = document.getElementById('user_id').value;
+  
+	 var data = {
+	  user_id: user_id,
+	  user_name: user_name
+	 }
+	 
+	 var updates = {};
+	 updates['/comments/' + user_id] = data;
+	 firebase.database().ref().update(updates);
+	 
+	 alert('The user is updated successfully!');
+	 
+	 reload_page();
+	}
+	
+	function delete_user(){
+	 var user_id = document.getElementById('user_id').value;
+	
+	 firebase.database().ref().child('/comments/' + user_id).remove();
+	 alert('The user is deleted successfully!');
+	 reload_page();
+	}
 	
 	function reload_page(){
 	 window.location.reload();
 	}
 	
    </script>
-
-
 </body>
 </html>
