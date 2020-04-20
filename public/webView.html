@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Flutter</title>
+	<title>Login</title>
 	<style>
 
 		h3 {
@@ -21,8 +21,7 @@
 		}
 		
 		</style>
-
-	<script src="https://www.gstatic.com/firebasejs/4.9.0/firebase.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/4.9.0/firebase.js"></script>
 
     <script>
         // Your web app's Firebase configuration
@@ -42,22 +41,67 @@
 
 </head>
 <body>
-<h1>Flutter Introduction</h1>
+<h3>
+    Inherited constants
+From class android.view.ViewGroup
+From class android.view.View
+Inherited fields
+From class android.view.View
+Public constructors
+WebView(Context context)
+Constructs a new WebView with an Activity Context object.
 
+</h3>
 <p class="stylename">
-	Quickly ship features with a focus on native end-user experiences. Layered architecture allows for full customization, 
-	which results in incredibly fast rendering and expressive and flexible designs.
-	Flutter’s widgets incorporate all critical platform differences such as scrolling, navigation, 
-	icons and fonts, and your Flutter code is compiled to native ARM machine code using Dart's native compilers. 
-	Thus Flutter gives you full native performance on both iOS and Android.
+    Inherited constants
+From class android.view.ViewGroup
+From class android.view.View
+Inherited fields
+From class android.view.View
+Public constructors
+WebView(Context context)
+Constructs a new WebView with an Activity Context object.
+
+WebView(Context context, AttributeSet attrs)
+Constructs a new WebView with layout parameters.
+
+WebView(Context context, AttributeSet attrs, int defStyleAttr)
+Constructs a new WebView with layout parameters and a default style.
+
+WebView(Context context, AttributeSet attrs, int defStyleAttr, int defStyleRes)
+Constructs a new WebView with layout parameters and a default style.
+
+WebView(Context context, AttributeSet attrs, int defStyleAttr, boolean privateBrowsing)
+This constructor is deprecated. Private browsing is no longer supported directly via WebView and will be removed in a future release. Prefer using WebSettings, WebViewDatabase, CookieManager and WebStorage for fine-grained control of privacy data.
+
+Public methods
+void	addJavascriptInterface(Object object, String name)
+Injects the supplied Java object into this WebView.
+
+void	autofill(SparseArray<AutofillValue> values)
+Automatically fills the content of the virtual children within this view.
+
+boolean	canGoBack()
+Gets whether this WebView has a back history item.
+
+boolean	canGoBackOrForward(int steps)
+
+
+PrintDocumentAdapter	createPrintDocumentAdapter(String documentName)
+Creates a PrintDocumentAdapter that provides the content of this WebView for printing.
+
+PrintDocumentAdapter	createPrintDocumentAdapter()
+This method was deprecated in API level 21. Use createPrintDocumentAdapter(java.lang.String) which requires user to provide a print document name.
+
+WebMessagePort[]	createWebMessageChannel()
+Creates a message channel to communicate with JS and returns the message ports that represent the endpoints of this message channel.
+
+ You can find all registered users in the Firebase console.
 </p>
-
-	<a>
-		<img src="images/print.png" alt="print screen"
-		onclick="window.print(); "target="_blank"
-		style="cursor: pointer;" > </a>
-
-
+<a>
+	<img src="images/print.png" alt="print screen"
+	onclick="window.print(); "target="_blank"
+	style="cursor: pointer;" > </a>
 
 <table>
   
@@ -73,12 +117,12 @@
 	</tr>
    </table>
    
-   <h2>COMMENTS</h2>
+   <h3>COMMENTS</h3>
    
    <table id="tbl_users_list" border="1">
 	<tr>
 	 <td>ID</td>
-	 <td> Comments </td>
+	 <td> Comments</td>
 	</tr>
    </table>
   
@@ -128,7 +172,5 @@
 	}
 	
    </script>
-
-
 </body>
 </html>

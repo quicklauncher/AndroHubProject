@@ -1,7 +1,8 @@
+
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Flutter</title>
+	<title>Android Learning</title>
 	<style>
 
 		h3 {
@@ -21,8 +22,7 @@
 		}
 		
 		</style>
-
-	<script src="https://www.gstatic.com/firebasejs/4.9.0/firebase.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/4.9.0/firebase.js"></script>
 
     <script>
         // Your web app's Firebase configuration
@@ -39,25 +39,25 @@
         // Initialize Firebase
         firebase.initializeApp(config);
       </script>
-
 </head>
 <body>
-<h1>Flutter Introduction</h1>
-
+<h3>
+    Firebase email and password authentication can be used to enable users of your android app register/login on your app using the old fashion email and password style without you worrying much about building a backend to support the user authentication process.
+</h3>
 <p class="stylename">
-	Quickly ship features with a focus on native end-user experiences. Layered architecture allows for full customization, 
-	which results in incredibly fast rendering and expressive and flexible designs.
-	Flutter’s widgets incorporate all critical platform differences such as scrolling, navigation, 
-	icons and fonts, and your Flutter code is compiled to native ARM machine code using Dart's native compilers. 
-	Thus Flutter gives you full native performance on both iOS and Android.
+    Get started with Android 11 Developer Preview
+    Review the program and timeline - read the Overview for key dates and details.
+    Set up a runtime environment - see Get Android 11 to flash a Google Pixel device or set up an emulator.
+    Set up Android Studio - try the preview SDK and tools - see Setup Guide for steps.
+    Learn about what's new - review the privacy features and behavior changes that may affect your app.
+    Test your app - run through all flows to look for issues. Toggle behavior changes at runtime to isolate issues.
+    Update your app - targeting Android 11 if possible, test with users via beta channels or other groups.
+And there you have it. A working email/password user registration and login activity for your android app. If you are wondering where your data is stored, the answer if on Firebase. You can find all registered users in the Firebase console.
 </p>
-
-	<a>
-		<img src="images/print.png" alt="print screen"
-		onclick="window.print(); "target="_blank"
-		style="cursor: pointer;" > </a>
-
-
+<a>
+	<img src="images/print.png" alt="print screen"
+	onclick="window.print(); "target="_blank"
+	style="cursor: pointer;" > </a>
 
 <table>
   
@@ -73,12 +73,12 @@
 	</tr>
    </table>
    
-   <h2>COMMENTS</h2>
+   <h3>COMMENTS</h3>
    
    <table id="tbl_users_list" border="1">
 	<tr>
 	 <td>ID</td>
-	 <td> Comments </td>
+	 <td> Comments</td>
 	</tr>
    </table>
   
@@ -128,7 +128,6 @@
 	}
 	
    </script>
-
 
 </body>
 </html>

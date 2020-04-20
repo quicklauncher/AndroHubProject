@@ -12,13 +12,17 @@
   <!-- NAVBAR -->
   <nav class="z-depth-0 grey lighten-4">
     <div class="nav-wrapper container">
-      
+    
       <ul id="nav-mobile" class="right hide-on-med-and-down">
-         
+          <li class="logged-in">
+            <a href="#" class="grey-text modal-trigger" data-target="modal-account">Account</a>
+          </li>
           <li class="logged-in">
             <a href="#" class="grey-text" id="logout">Logout</a>
           </li>
-          
+          <li class="logged-in">
+            <a href="#" class="grey-text modal-trigger" data-target="modal-create">Create Guide</a>
+          </li>
           <li class="logged-out">
             <a href="#" class="grey-text modal-trigger" data-target="modal-login">Login</a>
           </li>
@@ -34,7 +38,7 @@
   <div id="modal-signup" class="modal">
     <div class="modal-content">
       <h4>Sign up</h4><br />
-      <form id="signup-form" onsubmit="myFunction()">
+      <form id="signup-form">
         <div class="input-field">
           <input type="email" id="signup-email" required />
           <label for="signup-email">Email address</label>
@@ -47,14 +51,6 @@
       </form>
     </div>
   </div>
-
-  <script>
-
-function myFunction() {
-  
-  window.location = "learnflutter.html";
-}
-  </script>
 
   <!-- LOGIN MODAL -->
   <div id="modal-login" class="modal">
@@ -75,23 +71,45 @@ function myFunction() {
   </div>
 
   <!-- ACCOUNT MODAL -->
-
+  <div id="modal-account" class="modal">
+    <div class="modal-content center-align">
+      <h4>Account details</h4><br />
+      <div class="account-details"></div>
+      <div class="account-extras"></div>
+    </div>
+  </div>
 
   <!-- CREATE GUIDE MODAL -->
-  
+  <div id="modal-create" class="modal">
+    <div class="modal-content">
+      <h4>Create Guide</h4><br />
+      <form id="create-form">
+        <div class="input-field">
+          <input type="text" id="title" required>
+          <label for="title">Guide Title</label>
+        </div>
+        <div class="input-field">
+          <textarea id="content" class="materialize-textarea" required></textarea>
+          <label for="content">Guide Content</label>
+        </div>
+        <button class="btn yellow darken-2 z-depth-0">Create</button>
+      </form>
+    </div>
+  </div>
 
-  <!-- GUIDE LIST -->
-  
-  
- <script src="https://www.gstatic.com/firebasejs/7.11.0/firebase-app.js"></script>
-<script src="https://www.gstatic.com/firebasejs/7.11.0/firebase-auth.js"></script>
-<script src="https://www.gstatic.com/firebasejs/4.13.0/firebase-messaging.js"></script>
-<script src="https://www.gstatic.com/firebasejs/7.11.0/firebase-firestore.js"></script>
 
-<script>
-    // Your web app's Firebase configuration
+  <h3> Please register first!</h3>
+ 
+
+  
+  
+  <script src="https://www.gstatic.com/firebasejs/5.6.0/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/5.6.0/firebase-auth.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/5.6.0/firebase-firestore.js"></script>
+  <script>
+    // Initialize Firebase
     var config = {
-      apiKey: "AIzaSyBdG1InVWd_nf9L0A77rL23L_hRRnYKNPI",
+    apiKey: "AIzaSyBdG1InVWd_nf9L0A77rL23L_hRRnYKNPI",
     authDomain: "androhub-2b873.firebaseapp.com",
     databaseURL: "https://androhub-2b873.firebaseio.com",
     projectId: "androhub-2b873",
@@ -99,31 +117,19 @@ function myFunction() {
     messagingSenderId: "515237248825",
     appId: "1:515237248825:web:8a891adee8182b4802f2e8",
     measurementId: "G-1T5M7KETK3"
-    };
-    // Initialize Firebase
+  };
     firebase.initializeApp(config);
     
-    const auth=firebase.auth();
-    const db=firebase.firestore();
-    db.settings({ timestampsInSnapshots:true});
+    // make auth and firestore references
+    const auth = firebase.auth();
+    const db = firebase.firestore();
 
-    const messaging=firebase.messaging();
-    messaging.requestPermission()
-    .then(function(){
-      console.log('have permission');
-    })
-    .catch(function(err){
-      console.log('error occurd');
-    });
-
-    
+    // update firestore settings
+    db.settings({ timestampsInSnapshots: true });
   </script>
-
   <!-- Compiled and minified JavaScript -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
   <script src="scripts/auth.js"></script>
   <script src="scripts/inde.js"></script>
-
-
 </body>
 </html>
